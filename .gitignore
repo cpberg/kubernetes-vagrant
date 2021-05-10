@@ -1,0 +1,13 @@
+## Vim
+*~
+*.swp
+
+## Vagrant
+.vagrant
+
+## Ansible
+*.retry
+
+## Other
+tmp
+k8deploy
