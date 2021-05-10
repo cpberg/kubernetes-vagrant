@@ -28,6 +28,7 @@ Vagrant.configure("2") do |config|
             slave.vm.hostname = "k8s-slave"+i.to_s
             slave.vm.provision "ansible" do |ansible|
                 ansible.playbook = "k8deploy/slave-playbook.yml"
+                ansible.become = true
                 ansible.extra_vars = {
                     slave_ip: "192.168.50.#{i + 10}",
                 }
